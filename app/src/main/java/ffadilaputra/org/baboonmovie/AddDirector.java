@@ -1,5 +1,6 @@
 package ffadilaputra.org.baboonmovie;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -28,14 +29,12 @@ public class AddDirector extends AppCompatActivity {
         txtExperience = (EditText)findViewById(R.id.experience);
 
         btn.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View view) {
                 Director mDirector = new Director(txtName.getText().toString(),txtExperience.getText().toString());
                 mDirector.save();
                 txtName.setText("");
                 txtExperience.setText("");
-
                 Snackbar popup =Snackbar.make(findViewById(R.id.eue),"Data Tersimpan",Snackbar.LENGTH_SHORT);
                 popup.show();
             }

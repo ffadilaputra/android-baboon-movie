@@ -22,7 +22,6 @@ public class Movies extends SugarRecord<Movies> {
         this.year = year;
     }
 
-
     public String getName() {
         return name;
     }
@@ -46,7 +45,4 @@ public class Movies extends SugarRecord<Movies> {
     public void setYear(int year) {
         this.year = year;
     }
-
-
-
 }

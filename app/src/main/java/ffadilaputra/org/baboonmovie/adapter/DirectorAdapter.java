@@ -40,18 +40,16 @@ public class DirectorAdapter extends RecyclerView.Adapter<DirectorAdapter.Direco
         }
     }
 
-
     @Override
-    public DirectorAdapter.DirecotorViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.director_main,parent,false);
+    public DirecotorViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.director_item,parent,false);
         return new DirecotorViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(DirectorAdapter.DirecotorViewHolder holder, int position) {
+    public void onBindViewHolder(DirecotorViewHolder holder, int position) {
         final Director director = directorList.get(position);
         holder.directorTitle.setText(director.getName());
-
         holder.directorTitle.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -61,8 +59,6 @@ public class DirectorAdapter extends RecyclerView.Adapter<DirectorAdapter.Direco
                 view.getContext().startActivity(i);
             }
         });
-
-
     }
 
     @Override

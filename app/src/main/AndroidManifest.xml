@@ -21,7 +21,7 @@
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="ffadilaputra.org.baboonmovie"/>
 
         <activity
-            android:name=".AddDirector"
+            android:name=".DirectorActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -29,7 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AddDirector"></activity>
         <activity android:name=".DetailDirector"></activity>
+        <activity android:name=".EditDirector"></activity>
     </application>
 
 </manifest>
