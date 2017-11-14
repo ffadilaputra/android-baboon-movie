@@ -38,8 +38,7 @@ public class MovieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        
 
         listMovies = Movies.listAll(Movies.class);
         mRecyclerView = (RecyclerView)findViewById(R.id.movieList);
