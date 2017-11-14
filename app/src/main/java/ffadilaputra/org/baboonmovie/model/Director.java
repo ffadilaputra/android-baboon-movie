@@ -8,31 +8,31 @@ import com.orm.SugarRecord;
 
 public class Director extends SugarRecord<Director>{
 
-    public String name;
-    public String experience;
+    public String directorName;
+    public Movies movies;
 
     public Director(){
 
     }
 
-    public Director(String name, String experience) {
-        this.name = name;
-        this.experience = experience;
+    public Director(String directorName, Movies movies) {
+        this.directorName = directorName;
+        this.movies = movies;
     }
 
-    public String getName() {
-        return name;
+    public String getDirectorName() {
+        return directorName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDirectorName(String directorName) {
+        this.directorName = directorName;
     }
 
-    public String getExperience() {
-        return experience;
+    public Movies getMovies() {
+        return movies;
     }
 
-    public void setExperience(String experience) {
-        this.experience = experience;
+    public void setMovies(Movies movies) {
+        this.movies = movies;
     }
 }

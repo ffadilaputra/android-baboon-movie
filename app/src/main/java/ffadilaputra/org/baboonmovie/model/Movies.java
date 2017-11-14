@@ -10,13 +10,13 @@ public class Movies extends SugarRecord<Movies> {
 
     public String name;
     public String synopsys;
-    public int year;
+    public String year;
 
     public Movies(){
 
     }
 
-    public Movies(String name, String synopsys, int year) {
+    public Movies(String name, String synopsys, String year) {
         this.name = name;
         this.synopsys = synopsys;
         this.year = year;
@@ -38,11 +38,11 @@ public class Movies extends SugarRecord<Movies> {
         this.synopsys = synopsys;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 }
