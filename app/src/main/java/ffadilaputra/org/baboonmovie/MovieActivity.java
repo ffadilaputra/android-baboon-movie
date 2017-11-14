@@ -3,11 +3,13 @@ package ffadilaputra.org.baboonmovie;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -35,6 +37,9 @@ public class MovieActivity extends AppCompatActivity {
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         listMovies = Movies.listAll(Movies.class);
         mRecyclerView = (RecyclerView)findViewById(R.id.movieList);
@@ -67,6 +72,7 @@ public class MovieActivity extends AppCompatActivity {
                             listMovies = Movies.listAll(Movies.class);
                             moviesAdapter.setNewData(listMovies);
                             moviesAdapter.notifyDataSetChanged();
+
                         break;
                         case R.id.btnEdit:
                             Intent intent = new Intent(getApplicationContext(),EditMovies.class);

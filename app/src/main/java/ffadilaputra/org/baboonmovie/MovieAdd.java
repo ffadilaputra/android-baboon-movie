@@ -2,6 +2,7 @@ package ffadilaputra.org.baboonmovie;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,10 @@ public class MovieAdd extends AppCompatActivity {
             public void onClick(View view) {
                 Movies movies = new Movies(name.getText().toString(),syn.getText().toString(),(year.getText().toString()));
                 movies.save();
+
+                Snackbar mySnackbar = Snackbar.make(findViewById(R.id.movie_layout),"Data Berhasil Disimpan",Snackbar.LENGTH_SHORT);
+                mySnackbar.show();
+
             }
         });
 

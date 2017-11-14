@@ -45,5 +45,15 @@ public class MovieDetail extends AppCompatActivity {
             }
         });
 
+        btnActor = (Button)findViewById(R.id.btnActor);
+        btnActor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent asiqiin = new Intent(getApplicationContext(),ActorActivity.class);
+                asiqiin.putExtra("idMovies",MovieDetail.this.idMovie);
+                startActivity(asiqiin);
+            }
+        });
+
     }
 }

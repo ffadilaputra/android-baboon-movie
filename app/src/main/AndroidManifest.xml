@@ -34,6 +34,8 @@
         <activity android:name=".EditMovies"></activity>
         <activity android:name=".GenreActivity"></activity>
         <activity android:name=".AddGenre"></activity>
+        <activity android:name=".ActorActivity"></activity>
+        <activity android:name=".AddActor"></activity>
 
     </application>
 

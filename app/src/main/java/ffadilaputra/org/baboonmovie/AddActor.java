@@ -9,41 +9,41 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import ffadilaputra.org.baboonmovie.model.Actor;
 import ffadilaputra.org.baboonmovie.model.Genre;
 import ffadilaputra.org.baboonmovie.model.Movies;
 
 /**
- * Created by wirasyafri on 14/11/2017.
+ * Created by wirasyafri on 15/11/2017.
  */
 
-public class AddGenre extends AppCompatActivity {
+public class AddActor extends AppCompatActivity {
 
     private Long idMovies;
-    Button btnSave;
-    EditText txtGenreName;
+    Button btnSave,btnAdd;
+    EditText txtActor;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.genre_add);
+        setContentView(R.layout.actor_add);
 
         Intent i = getIntent();
         idMovies = i.getLongExtra("idMovies",0L);
-        txtGenreName = (EditText) findViewById(R.id.txtGenreName);
+        txtActor = (EditText) findViewById(R.id.txtActorName);
         btnSave = (Button) findViewById(R.id.btnSimpan);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Movies movies = Movies.findById(Movies.class,AddGenre.this.idMovies);
-                Genre genre = new Genre(txtGenreName.getText().toString(),movies);
-                genre.save();
+                Movies movies = Movies.findById(Movies.class,AddActor.this.idMovies);
+                Actor actor = new Actor(txtActor.getText().toString(),movies);
+                actor.save();
 
-                Snackbar mySnackbar = Snackbar.make(findViewById(R.id.genre_layout),"Data Berhasil Disimpan",Snackbar.LENGTH_SHORT);
+                Snackbar mySnackbar = Snackbar.make(findViewById(R.id.actor_layout),"Data Berhasil Disimpan",Snackbar.LENGTH_SHORT);
                 mySnackbar.show();
 
             }
         });
-
     }
 }
