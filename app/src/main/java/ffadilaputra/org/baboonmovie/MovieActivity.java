@@ -38,8 +38,6 @@ public class MovieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_main);
 
-        
-
         listMovies = Movies.listAll(Movies.class);
         mRecyclerView = (RecyclerView)findViewById(R.id.movieList);
         moviesAdapter = new MoviesAdapter(R.layout.movie_list,listMovies);

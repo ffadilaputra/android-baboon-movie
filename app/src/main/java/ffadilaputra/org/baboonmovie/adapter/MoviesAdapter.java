@@ -28,6 +28,4 @@ public class MoviesAdapter extends BaseQuickAdapter<Movies,BaseViewHolder> {
         helper.addOnClickListener(R.id.btnEdit);
         helper.addOnClickListener(R.id.movieName);
     }
-
-
 }

@@ -41,7 +41,6 @@ public class AddGenre extends AppCompatActivity {
 
                 Snackbar mySnackbar = Snackbar.make(findViewById(R.id.genre_layout), "Data Berhasil Disimpan", Snackbar.LENGTH_SHORT);
                 mySnackbar.show();
-
             }
         });
 
